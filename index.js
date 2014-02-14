@@ -1,5 +1,6 @@
 var spawn = require('child_process').spawn
 var exists = require('fs').existsSync
+var join = require('path').join
 
 // Normalize arch string to match golang-style
 var arch = process.arch
@@ -17,7 +18,7 @@ if (platform === 'win32') {
 }
 
 // Check existence of executable for the given platform and architecture
-var execPath = './bcrypt-' + platform + '-' + arch
+var execPath = join(__dirname, 'bcrypt-' + platform + '-' + arch)
 if ( ! exists(execPath)) {
   console.error('isolated-bcrypt does not support this platform')
 }

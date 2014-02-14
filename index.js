@@ -32,7 +32,7 @@ exports.hash = function (password) {
   handle(p, callback)
 }
 
-exports.compare = function (hash, password, callback) {
+exports.compare = function (password, hash, callback) {
   var p = spawn(execPath, ['compare', password, hash], {
     cwd: __dirname
   })

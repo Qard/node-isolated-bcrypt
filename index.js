@@ -18,10 +18,7 @@ if (platform === 'win32') {
 }
 
 // Check existence of executable for the given platform and architecture
-var execPath = join(__dirname, 'bcrypt-' + platform + '-' + arch)
-if ( ! exists(execPath)) {
-  console.error('isolated-bcrypt does not support this platform')
-}
+var execPath = join(__dirname, 'bcrypt')
 
 exports.hash = function (password) {
   var callback = arguments[arguments.length - 1]

@@ -1,5 +1,7 @@
 # isolated-bcrypt
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Qard/node-isolated-bcrypt.svg)](https://greenkeeper.io/)
+
 This is a dirty, dirty hack around bcrypt being horribly broken in node 0.11.
 You probably shouldn't use this in production.
 
